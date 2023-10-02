@@ -16,7 +16,7 @@ export async function Database(){
   await client.connect()
   
   const res = await client.query('SELECT * FROM products')
-  console.log(res);
+  console.log(res.rows);
   
   await client.end()
 }
